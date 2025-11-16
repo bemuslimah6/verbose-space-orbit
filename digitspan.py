@@ -131,7 +131,7 @@ if st.session_state['stage'] == 'questionnaire':
     st.header("Kuesioner Ketergantungan AI")
     st.write("1 = sangat tidak setuju ... 5 = sangat setuju")
 
-    for i, item in enumerate(q_items, start=[None]):
+    for i, item in enumerate(q_items, start=1):
         st.session_state['q_answers'][f'q{i}'] = st.radio(item, [1,2,3,4,5], key=f'q{i}')
 
     if st.button("Lanjut ke Digit Span"):
